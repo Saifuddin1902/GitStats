@@ -2,16 +2,11 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config(); // Load environment variables from .env
-
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const app = express();
 app.use(cors());
 app.use(express.json());
-
 const PORT = 3000;
-
-// GitHub token from environment variable
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-
 const axiosConfig = GITHUB_TOKEN ? {
   headers: { Authorization: `token ${GITHUB_TOKEN}` }
 } : {};
