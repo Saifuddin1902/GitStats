@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitStats</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="40"/>
+      GitStats
+    </h1>
+
+    <div class="input-section">
+      <input type="text" id="username" placeholder="Enter GitHub Username" />
+      <button onclick="fetchUser()">Get Stats</button>
+    </div>
+
+    <div id="result"></div>
+
+    <canvas id="statsChart" width="400" height="400"></canvas>
+    <canvas id="langChart" width="400" height="400"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
